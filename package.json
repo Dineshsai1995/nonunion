@@ -33,6 +33,7 @@
   "dependencies": {
     "@expo-google-fonts/space-grotesk": "^0.2.2",
     "@expo/metro-runtime": "~4.0.0",
+    "@react-native-picker/picker": "^2.11.0",
     "@react-navigation/native": "^7.0.14",
     "@react-navigation/native-stack": "^7.2.0",
     "@shopify/flash-list": "1.7.3",
@@ -66,10 +67,10 @@
     "react-native-web": "~0.19.6"
   },
   "devDependencies": {
-    "@react-native-community/cli": "latest",
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
+    "@react-native-community/cli": "latest",
     "@testing-library/react-native": "^12.5.2",
     "@types/jest": "^29.2.1",
     "@types/react": "~18.3.12",
