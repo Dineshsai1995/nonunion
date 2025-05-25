@@ -3,6 +3,7 @@ import { FC } from "react"
 import { Image, StyleSheet, TextInput, TouchableOpacity, View } from "react-native"
 import { Text, Screen } from "@/components"
 import { useState } from "react"
+import { useNavigation } from "@react-navigation/native"
 
 import { Picker } from "@react-native-picker/picker"
 
@@ -14,7 +15,10 @@ interface WelcomeScreenProps extends AppStackScreenProps<"Welcome"> {}
 
 export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeScreen() {
   const { theme } = useAppTheme()
+  const navigation = useNavigation()
+
   const handleAddEntry = () => {
+    navigation.navigate("TimesheetEntry" as never)
     console.log("Add Entry button pressed")
   }
 

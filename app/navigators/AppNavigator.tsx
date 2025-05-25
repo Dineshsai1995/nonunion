@@ -12,6 +12,7 @@ import Config from "../config"
 import { navigationRef, useBackButtonHandler } from "./navigationUtilities"
 import { useAppTheme, useThemeProvider } from "@/utils/useAppTheme"
 import { ComponentProps } from "react"
+import { TimesheetEntryScreen } from "@/screens/TimesheetEntryScreen"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -28,6 +29,7 @@ import { ComponentProps } from "react"
  */
 export type AppStackParamList = {
   Welcome: undefined
+  TimesheetEntry: undefined
   // 🔥 Your screens go here
   // IGNITE_GENERATOR_ANCHOR_APP_STACK_PARAM_LIST
 }
@@ -62,8 +64,7 @@ const AppStack = observer(function AppStack() {
       }}
     >
       <Stack.Screen name="Welcome" component={Screens.WelcomeScreen} />
-      {/** 🔥 Your screens go here */}
-      {/* IGNITE_GENERATOR_ANCHOR_APP_STACK_SCREENS */}
+      <Stack.Screen name="TimesheetEntry" component={TimesheetEntryScreen} />
     </Stack.Navigator>
   )
 })
