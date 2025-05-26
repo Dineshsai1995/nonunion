@@ -76,6 +76,15 @@ export const WelcomeScreen: FC<WelcomeScreenProps> = observer(function WelcomeSc
           <TouchableOpacity style={styles.button} onPress={handleAddEntry}>
             <Text style={styles.buttonText}> + Add Entry</Text>
           </TouchableOpacity>
+
+          <View style={styles.footerButtons}>
+            <TouchableOpacity style={styles.resetButton}>
+              <Text style={styles.resetButtonText}>Reset</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.submitButton}>
+              <Text style={styles.submitButtonText}>Submit</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </Screen>
@@ -101,8 +110,13 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 30,
   },
+  footerButtons: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 280,
+  },
   header: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: "600",
     marginBottom: 20,
   },
@@ -122,6 +136,23 @@ const styles = StyleSheet.create({
     borderRadius: 6,
     marginBottom: 20,
     padding: 10,
+  },
+  resetButton: {
+    borderRadius: 20,
+    borderWidth: 1,
+    paddingHorizontal: 24,
+    paddingVertical: 10,
+  },
+  resetButtonText: {
+    fontSize: 16,
+  },
+  submitButton: {
+    borderRadius: 20,
+    paddingHorizontal: 24,
+    paddingVertical: 10,
+  },
+  submitButtonText: {
+    fontSize: 16,
   },
 })
 
